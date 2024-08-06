@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Ian Pablo</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Holdings Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://ibb.co/Hhj56Nf" alt="Digital Holdings Company Logo" class="logo">
+            <img src="https://via.placeholder.com/50" alt="Ad Campaign Logo" class="ad-logo">
+            <span class="company-name">Digital Holdings Company</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home <i class="fas fa-home"></i></a></li>
+                <li><a href="#services">Services <i class="fas fa-cogs"></i></a></li>
+                <li><a href="#video">Video <i class="fas fa-video"></i></a></li>
+                <li><a href="#clients">Clients <i class="fas fa-users"></i></a></li>
+                <li><a href="#contact">Contact <i class="fas fa-envelope"></i></a></li>
+                <li><a href="#payment">Payment Plans <i class="fas fa-credit-card"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="login-box">
+            <div class="left">
+                <h1>Sign up</h1>
+                <input type="text" id="email" name="email" placeholder="E-mail" />
+                <input type="password" id="password" name="password" placeholder="Password" />
+                <input type="button" id="signup" name="signup" value="Sign Up" />
+                <input type="button" id="login" name="login" value="Login" />
+            </div>
+            <div class="right">
+                <span class="loginwith">Sign in with<br />social network</span>
+                <button class="social-signin facebook">Login with Facebook</button>
+                <button class="social-signin twitter">Login with Twitter</button>
+                <button class="social-signin google">Login with Google</button>
+            </div>
+        </div>
+
+        <section id="video">
+            <h2>How to Earn by Watching Ads</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1-0nTeUuKYI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="clients">
+            <h2>Our Clients</h2>
+            <div class="clients-logos">
+                <img src="https://www.feedough.com/wp-content/uploads/2022/06/make-money-watching-ads-768x432.webp" alt="Client Logo 1">
+                <img src="https://dollarsprout.com/wp-content/uploads/2023/09/get-paid-to-watch-ads.jpg" alt="Client Logo 2">
+            </div>
+            <div class="testimonials">
+                <p><i class="fas fa-quote-left"></i> This website helped me earn extra cash to cater for my tuition fee. <i class="fas fa-quote-right"></i></p>
+                <p><i class="fas fa-quote-left"></i> This website should be renowned for its genuineness and suitability as it pays money direct to your mobile. <i class="fas fa-quote-right"></i></p>
+                <p><i class="fas fa-quote-left"></i> If you want a legit ad watching site for money payment then this is the best. <i class="fas fa-quote-right"></i></p>
+            </div>
+        </section>
+
+        <section id="payment">
+            <h2>Payment Plans</h2>
+            <div class="payment-cards">
+                <div class="payment-card">
+                    <h3>Basic Plan</h3>
+                    <p>Watch ads for 10 minutes a day and earn $5 per week.</p>
+                    <p>Cost: Free</p>
+                    <button class="signup-button">Sign Up</button>
+                </div>
+                <div class="payment-card">
+                    <h3>Premium Plan</h3>
+                    <p>Watch ads for 30 minutes a day and earn $20 per day.</p>
+                    <p>Cost: $5 per hour</p>
+                    <button class="signup-button">Sign Up</button>
+                </div>
+                <div class="payment-card">
+                    <h3>Pro Plan</h3>
+                    <p>Watch ads for 1 hour a day and earn $50 per week.</p>
+                    <p>Cost: $10 per month</p>
+                    <button class="signup-button">Sign Up</button>
+                </div>
+            </div>
+            <div class="payment-methods">
+                <h3>Accepted Payment Methods</h3>
+                <img src="https://i.ibb.co/JxyFJz6/equity-bank-logo.png" alt="Equity Bank">
+                <img src="https://i.ibb.co/b7VFB50/128px-M-PESA-LOGO-01.svg.png" alt="M-PESA">
+                <i class="fab fa-paypal"></i>
+            </div>
+        </section>
+        <!-- Google AdSense Ad Code -->
+        <section id="ads">
+            <h2>Advertisements</h2>
+            <div class="ads-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-XXXXXX" <!-- Replace with your AdSense Publisher ID -->
+                     data-ad-slot="XXXXXX" <!-- Replace with your AdSense Ad Slot ID -->
+                     data-ad-format="auto"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Digital Holdings Company</p>
+    </footer>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signInWithPopup, FacebookAuthProvider, TwitterAuthProvider, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyATgp3coFjpr0z_XilwePKQ1hjEosVsoC8",
+            authDomain: "ad-advertising-campaign.firebaseapp.com",
+            databaseURL: "https://ad-advertising-campaign-default-rtdb.firebaseio.com",
+            projectId: "ad-advertising-campaign",
+            storageBucket: "ad-advertising-campaign.appspot.com",
+            messagingSenderId: "828550976129",
+            appId: "1:828550976129:web:72ddadeadcffe033b4f380",
+            measurementId: "G-VBLRD92KSK"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+
+        document.getElementById('signup').addEventListener('click', () => {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    alert('User created successfully!');
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        });
+
+        document.getElementById('login').addEventListener('click', () => {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    alert('User logged in successfully!');
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        });
+
+        document.querySelector('.social-signin.facebook').addEventListener('click', () => {
+            const provider = new FacebookAuthProvider();
+            signInWithPopup(auth, provider)
+                .then((result) => {
+                    alert('User signed in with Facebook!');
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        });
+
+        document.querySelector('.social-signin.twitter').addEventListener('click', () => {
+            const provider = new TwitterAuthProvider();
+            signInWithPopup(auth, provider)
+                .then((result) => {
+                    alert('User signed in with Twitter!');
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        });
+
+        document.querySelector('.social-signin.google').addEventListener('click', () => {
+            const provider = new GoogleAuthProvider();
+            signInWithPopup(auth, provider)
+                .then((result) => {
+                    alert('User signed in with Google!');
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        });
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                console.log('User is signed in:', user);
+            } else {
+                console.log('No user is signed in.');
+            }
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

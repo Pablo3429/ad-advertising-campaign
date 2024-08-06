@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EFD5C3;
+    color: #839791;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#login-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #333;
+}
+
+#login-box .left,
+#login-box .right {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-box .left input[type="text"],
+#login-box .left input[type="password"],
+#login-box .left input[type="button"] {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-box .right {
+    background: #f7f7f7;
+    text-align: center;
+}
+
+#login-box .right .social-signin {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border: none;
+    background: #4267B2;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#video {
+    padding: 2rem;
+    background: #EFD5C3;
+}
+
+.video-container {
+    text-align: center;
+}
+
+#clients {
+    padding: 2rem;
+    background: #EFD5C3;
+}
+
+.clients-logos {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.testimonials {
+    text-align: center;
+}
+
+.payment-cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.payment-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.payment-methods {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.ads-container {
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
